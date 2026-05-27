@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Derby Ventures</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-family);
+      background: var(--color-bg);
+      color: var(--color-text);
+      min-height: 100vh;
+    }
+
+    /* ── Nav ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-6) var(--space-12);
+      border-bottom: 1px solid var(--color-border);
+      background: var(--color-bg);
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      text-decoration: none;
+    }
+    .nav-dot {
+      width: 22px;
+      height: 22px;
+      background: var(--color-primary);
+      border-radius: var(--radius-full);
+      flex-shrink: 0;
+    }
+    .nav-name {
+      font-size: var(--font-size-base);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-text);
+    }
+    .nav-links {
+      display: flex;
+      gap: var(--space-10);
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: var(--font-weight-medium);
+      color: var(--color-text-secondary);
+      text-decoration: none;
+    }
+    .nav-links a:hover { color: var(--color-text); }
+
+    /* ── Hero ── */
+    .hero {
+      padding: var(--space-18) var(--space-12) var(--space-14);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .hero-eyebrow {
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: var(--space-4);
+    }
+    .hero-title {
+      font-size: var(--font-size-xl);
+      font-weight: var(--font-weight-extrabold);
+      line-height: 1.1;
+      color: var(--color-text);
+      margin-bottom: var(--space-6);
+      letter-spacing: -0.02em;
+    }
+    .hero-subtitle {
+      font-size: var(--font-size-md);
+      color: var(--color-text-secondary);
+      max-width: 520px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="/">
+      <div class="nav-dot"></div>
+      <span class="nav-name">Red Derby Ventures</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#work">Products</a></li>
+      <li><a href="#consulting">Consulting</a></li>
+      <li><a href="mailto:smithar106@gmail.com,ashleerthomas@gmail.com?subject=Hello — Red Derby Ventures">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-eyebrow">Red Derby Ventures LLC</div>
+    <h1 class="hero-title">Building software<br>that matters.</h1>
+    <p class="hero-subtitle">We create consumer apps and civic technology — and advise organizations on the challenges shaping our world.</p>
+  </section>
+
+</body>
+</html>

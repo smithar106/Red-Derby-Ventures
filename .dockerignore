@@ -1,6 +1,5 @@
 .git
 .gitignore
 Dockerfile
-nginx.conf
 docs/
 .superpowers/

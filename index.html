@@ -263,6 +263,38 @@
       font-weight: var(--font-weight-extrabold);
       flex-shrink: 0;
     }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--color-border);
+      padding: var(--space-8) var(--space-12);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+    .footer-dot {
+      width: 14px;
+      height: 14px;
+      background: var(--color-primary);
+      border-radius: var(--radius-full);
+      flex-shrink: 0;
+    }
+    .footer-name {
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+    }
+    .footer-right {
+      font-size: var(--font-size-xs);
+      color: var(--color-text-muted);
+    }
   </style>
 </head>
 <body>
@@ -388,6 +420,14 @@
       </article>
     </div>
   </section>
+
+  <footer>
+    <div class="footer-left">
+      <div class="footer-dot"></div>
+      <span class="footer-name">Red Derby Ventures LLC</span>
+    </div>
+    <span class="footer-right">&copy; 2026 Red Derby Ventures LLC. All rights reserved.</span>
+  </footer>
 
 </body>
 </html>

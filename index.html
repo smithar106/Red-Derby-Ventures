@@ -88,6 +88,181 @@
       max-width: 520px;
       line-height: 1.6;
     }
+
+    /* ── Cards Section ── */
+    .cards-section {
+      padding: 0 var(--space-12) var(--space-20);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section-label {
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-7);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-7);
+    }
+
+    /* ── Card ── */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      box-shadow: var(--card-shadow-hover);
+      transform: translateY(-2px);
+    }
+    .card-header {
+      padding: var(--space-8) var(--space-8) var(--space-6);
+      border-bottom: 1px solid var(--color-border-inner);
+    }
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: var(--space-4);
+    }
+    .card-category {
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: 6px;
+    }
+    .card-title {
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-extrabold);
+      color: var(--color-text);
+      letter-spacing: -0.01em;
+    }
+    .card-body {
+      padding: var(--space-6) var(--space-8) var(--space-7);
+      flex: 1;
+    }
+    .card-desc {
+      font-size: var(--font-size-base);
+      color: var(--color-text-secondary);
+      line-height: 1.65;
+      margin-bottom: var(--space-5);
+    }
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .tag {
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-semibold);
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-full);
+      background: var(--color-tag-bg);
+      color: var(--color-text-secondary);
+      letter-spacing: 0.02em;
+    }
+
+    /* ── Card Footer ── */
+    .card-footer {
+      padding: var(--space-5) var(--space-8);
+      border-top: 1px solid var(--color-border-inner);
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+    .btn-primary {
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-bold);
+      color: var(--btn-primary-text);
+      background: var(--btn-primary-bg);
+      border: none;
+      border-radius: var(--radius-md);
+      padding: var(--space-2) var(--space-4);
+      cursor: pointer;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      transition: background 0.15s ease;
+    }
+    .btn-primary:hover { background: var(--btn-primary-bg-hover); }
+    .btn-secondary {
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-semibold);
+      color: var(--btn-secondary-text);
+      background: transparent;
+      border: 1.5px solid var(--btn-secondary-border);
+      border-radius: var(--radius-md);
+      padding: 7px var(--space-4);
+      cursor: pointer;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .btn-secondary:hover {
+      background: var(--btn-secondary-bg-hover);
+      color: var(--btn-secondary-text-hover);
+    }
+    .coming-soon {
+      font-size: var(--font-size-xs);
+      color: var(--color-text-muted);
+      font-weight: var(--font-weight-medium);
+    }
+
+    /* ── Consulting footer ── */
+    .consulting-footer {
+      padding: var(--space-5) var(--space-8);
+      border-top: 1px solid var(--color-border-inner);
+    }
+    .consulting-cta { margin-bottom: var(--space-4); }
+    .consulting-profiles {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+    }
+    .profiles-label {
+      font-size: var(--font-size-xs);
+      color: var(--color-text-muted);
+      font-weight: var(--font-weight-medium);
+    }
+    .profile-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-neutral-700);
+      text-decoration: none;
+    }
+    .profile-link:hover { color: var(--color-text); }
+    .li-icon {
+      width: 20px;
+      height: 20px;
+      background: var(--color-blue-linkedin);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-white);
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-extrabold);
+      flex-shrink: 0;
+    }
   </style>
 </head>
 <body>
@@ -108,6 +283,13 @@
     <div class="hero-eyebrow">Red Derby Ventures LLC</div>
     <h1 class="hero-title">Building software<br>that matters.</h1>
     <p class="hero-subtitle">We create consumer apps and civic technology — and advise organizations on the challenges shaping our world.</p>
+  </section>
+
+  <section class="cards-section" id="work">
+    <div class="section-label">Our Work</div>
+    <div class="grid">
+      <!-- cards go here — Task 4 -->
+    </div>
   </section>
 
 </body>

@@ -101,7 +101,13 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--color-text-muted);
+      margin-bottom: var(--space-3);
+    }
+    .section-subtitle {
+      font-size: var(--font-size-base);
+      color: var(--color-text-secondary);
       margin-bottom: var(--space-7);
+      line-height: 1.5;
     }
     .grid {
       display: grid;
@@ -331,6 +337,7 @@
     </a>
     <ul class="nav-links">
       <li><a href="#work">Products</a></li>
+      <li><a href="#ai-tools">AI Tools</a></li>
       <li><a href="#consulting">Consulting</a></li>
       <li><a href="mailto:smithar106@gmail.com,ashleerthomas@gmail.com?subject=Hello — Red Derby Ventures">Contact</a></li>
     </ul>
@@ -353,7 +360,7 @@
           <h2 class="card-title">MyCity311</h2>
         </div>
         <div class="card-body">
-          <p class="card-desc">AI-powered 311 reporting for 50 US cities. Residents submit requests in seconds; cities get cleaner data and faster resolution.</p>
+          <p class="card-desc">AI-powered 311 reporting across 50 US cities with 12 ticket categories and no login required. Includes a city admin backend with routing and analytics.</p>
           <div class="card-tags">
             <span class="tag">iOS</span>
             <span class="tag">50 Cities</span>
@@ -363,7 +370,7 @@
         </div>
         <div class="card-footer">
           <a class="btn-primary" href="https://home.mycity311.co" target="_blank" rel="noopener">Learn more</a>
-          <span class="coming-soon">App coming soon</span>
+          <a class="btn-secondary" href="https://apps.apple.com/us/app/mycity311/id6763618744" target="_blank" rel="noopener">Download the app</a>
         </div>
       </article>
 
@@ -385,7 +392,7 @@
         </div>
         <div class="card-footer">
           <a class="btn-primary" href="https://mynextbook.me" target="_blank" rel="noopener">Learn more</a>
-          <a class="btn-secondary" href="https://apps.apple.com/app/id6763831526" target="_blank" rel="noopener">Download the app</a>
+          <a class="btn-secondary" href="https://apps.apple.com/us/app/my-next-book-what-to-read/id6763831526" target="_blank" rel="noopener">Download the app</a>
         </div>
       </article>
 
@@ -411,8 +418,62 @@
         </div>
       </article>
 
-      <!-- Consulting -->
-      <article class="card" id="consulting">
+      <!-- MyChef -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-icon" style="background:#FFF5E6;">🍳</div>
+          <div class="card-category">Consumer Tech · iOS App</div>
+          <h2 class="card-title">MyChef</h2>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">Photograph your fridge, get a personalized weekly meal plan. Rate meals and the app learns your taste — a self-reinforcing recommendation engine built on the same taste-vector model as My Next Book.</p>
+          <div class="card-tags">
+            <span class="tag">iOS</span>
+            <span class="tag">AI</span>
+            <span class="tag">Food</span>
+            <span class="tag">Recipes</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="coming-soon">In development</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="cards-section" id="ai-tools">
+    <div class="section-label">AI Tools</div>
+    <p class="section-subtitle">Infrastructure for teams running AI in production.</p>
+    <div class="grid">
+      <article class="card">
+        <div class="card-header">
+          <div class="card-icon" style="background:#F0F0FF;">🧠</div>
+          <div class="card-category">AI Tools · Live Platform</div>
+          <h2 class="card-title">AI Ops Intelligence Suite</h2>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">A unified platform for AI operators — model regression testing, spend attribution, and benchmark tracking. Built on the Anthropic and DeepSeek APIs with three companion MCP servers.</p>
+          <div class="card-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Anthropic API</span>
+            <span class="tag">DeepSeek</span>
+            <span class="tag">MCP</span>
+            <span class="tag">Railway</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <a class="btn-primary" href="https://web-production-f4430.up.railway.app/" target="_blank" rel="noopener">Launch app</a>
+          <a class="btn-secondary" href="https://github.com/smithar106" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="cards-section" id="consulting">
+    <div class="section-label">Consulting</div>
+    <div class="grid">
+      <article class="card">
         <div class="card-header">
           <div class="card-icon" style="background:#FFF0F0;">🌍</div>
           <div class="card-category">Advisory Services</div>

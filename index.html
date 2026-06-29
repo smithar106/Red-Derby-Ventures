@@ -89,6 +89,87 @@
       line-height: 1.6;
     }
 
+    /* ── Thesis Section ── */
+    .thesis-section {
+      padding: 0 var(--space-12) var(--space-20);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .thesis-block {
+      background: var(--color-neutral-900);
+      border-radius: var(--radius-xl);
+      padding: var(--space-10) var(--space-12);
+      position: relative;
+      overflow: hidden;
+    }
+    .thesis-block::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--color-primary);
+    }
+    .thesis-eyebrow {
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: var(--space-4);
+    }
+    .thesis-headline {
+      font-size: 26px;
+      font-weight: var(--font-weight-extrabold);
+      color: var(--color-white);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-6);
+      max-width: 580px;
+    }
+    .thesis-body {
+      font-size: var(--font-size-base);
+      color: var(--color-neutral-500);
+      line-height: 1.75;
+      max-width: 620px;
+    }
+    .thesis-body p + p {
+      margin-top: var(--space-4);
+    }
+    .thesis-body strong {
+      color: var(--color-neutral-200);
+      font-weight: var(--font-weight-semibold);
+    }
+    .thesis-divider {
+      width: 40px;
+      height: 2px;
+      background: var(--color-primary);
+      margin: var(--space-7) 0;
+      opacity: 0.5;
+    }
+    .thesis-spotify {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-4);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg);
+      padding: var(--space-5) var(--space-6);
+    }
+    .thesis-spotify-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .thesis-spotify-text {
+      font-size: var(--font-size-base);
+      color: var(--color-neutral-500);
+      line-height: 1.6;
+    }
+    .thesis-spotify-text strong {
+      color: var(--color-neutral-200);
+      font-weight: var(--font-weight-semibold);
+    }
+
     /* ── Cards Section ── */
     .cards-section {
       padding: 0 var(--space-12) var(--space-20);
@@ -316,6 +397,10 @@
       }
       .hero-title { font-size: 36px; }
 
+      .thesis-section { padding: 0 var(--space-6) var(--space-12); }
+      .thesis-block { padding: var(--space-7) var(--space-6); }
+      .thesis-headline { font-size: 22px; }
+
       .cards-section { padding: 0 var(--space-6) var(--space-12); }
       .grid { grid-template-columns: 1fr; }
 
@@ -336,6 +421,7 @@
       <span class="nav-name">Red Derby Ventures</span>
     </a>
     <ul class="nav-links">
+      <li><a href="#thesis">Thesis</a></li>
       <li><a href="#work">Our Work</a></li>
       <li><a href="#apps">Our Apps</a></li>
       <li><a href="#consulting">Consulting</a></li>
@@ -349,6 +435,27 @@
     <p class="hero-subtitle">We create consumer apps and civic technology — and advise organizations on the challenges shaping our world.</p>
   </section>
 
+  <!-- ── Thesis ── -->
+  <section class="thesis-section" id="thesis">
+    <div class="thesis-block">
+      <div class="thesis-eyebrow">Our Thesis</div>
+      <h2 class="thesis-headline">The next phase of AI isn't about doing more.<br>It's about needing less from you.</h2>
+      <div class="thesis-body">
+        <p>Smartphones were supposed to give us more time. Instead they gave us TikTok feeds, infinite scroll, and four hours of screen time we didn't ask for. We're watching the beginning of the reversal — people returning to dumb phones, app-free devices selling out, a growing exhaustion with managing everything just because you can access everything.</p>
+        <p>AI is going to accelerate this shift. Not by adding more intelligence to your screen, but by moving the work off it entirely. <strong>You spend ten minutes with a model. You share your preferences, your taste, how you make decisions. The model learns — then works in the background.</strong> Every few minutes it surfaces a choice: A or B. You confirm and disappear again. No feed. No notifications. No app to babysit.</p>
+        <p>The decision-making happens on the backend. The output shows up when it's ready. Not smarter phones. Not more powerful apps. <strong>Just your time back.</strong></p>
+      </div>
+      <div class="thesis-divider"></div>
+      <div class="thesis-spotify">
+        <div class="thesis-spotify-icon">🎵</div>
+        <div class="thesis-spotify-text">
+          <strong>Spotify has already proven this model works.</strong> You rate a handful of songs, and Discover Weekly appears every Monday — no ongoing input required. The more you use it, the sharper it gets. You never manage it. It just works. Our four apps are built on the same principle: <strong>taste in, time back out.</strong> A reading identity that finds your next book. A style DNA that surfaces the right secondhand piece. A fridge scan that builds your week of meals. A drink profile that finds your NA match. Each one learns from a small moment of input and removes a recurring decision from your life permanently.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Our Work ── -->
   <section class="cards-section" id="work">
     <div class="section-label">Our Work</div>
     <p class="section-subtitle">Platforms and tools we've built and operate.</p>
@@ -401,10 +508,12 @@
     </div>
   </section>
 
+  <!-- ── Our Apps ── -->
   <section class="cards-section" id="apps">
     <div class="section-label">Our Apps</div>
-    <p class="section-subtitle">Consumer products that learn your taste.</p>
+    <p class="section-subtitle">Consumer products that learn your taste and give you your time back.</p>
     <div class="grid">
+
       <!-- My Next Book -->
       <article class="card">
         <div class="card-header">
@@ -413,7 +522,7 @@
           <h2 class="card-title">My Next Book</h2>
         </div>
         <div class="card-body">
-          <p class="card-desc">AI book discovery built around your reading identity. A quiz surfaces your literary archetype, then surfaces books you'll actually finish.</p>
+          <p class="card-desc">AI book discovery built around your reading identity. A quiz surfaces your literary archetype, then surfaces books you'll actually finish — and gets sharper the more you rate.</p>
           <div class="card-tags">
             <span class="tag">iOS</span>
             <span class="tag">AI</span>
@@ -435,7 +544,7 @@
           <h2 class="card-title">My Next Thrift</h2>
         </div>
         <div class="card-body">
-          <p class="card-desc">Thrift shopping reimagined as curation. 87,000+ items surfaced by your style DNA — secondhand finds that feel like they were pulled just for you.</p>
+          <p class="card-desc">Thrift shopping reimagined as curation. 72,000+ secondhand items surfaced by your Style DNA — era, aesthetic, fit — so you never scroll a rack again.</p>
           <div class="card-tags">
             <span class="tag">iOS</span>
             <span class="tag">Fashion</span>
@@ -457,7 +566,7 @@
           <h2 class="card-title">MyChef</h2>
         </div>
         <div class="card-body">
-          <p class="card-desc">Photograph your fridge, get a personalized weekly meal plan. Rate meals and the app learns your taste — a self-reinforcing recommendation engine built on the same taste-vector model as My Next Book.</p>
+          <p class="card-desc">Photograph your fridge, get a personalised weekly meal plan. Rate meals and the app learns your taste — a self-reinforcing recommendation engine that removes the daily "what's for dinner?" entirely.</p>
           <div class="card-tags">
             <span class="tag">iOS</span>
             <span class="tag">AI</span>
@@ -469,9 +578,32 @@
           <span class="coming-soon">In development</span>
         </div>
       </article>
+
+      <!-- Sip Switch -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-icon" style="background:#FFFBF0;">🍋</div>
+          <div class="card-category">Consumer Tech · iOS App</div>
+          <h2 class="card-title">Sip Switch</h2>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">Tell us what you drink. We find the non-alcoholic version that actually satisfies. A taste-profile quiz maps your flavour preferences to real NA products — for the 54% of people drinking less but not sure what to drink instead.</p>
+          <div class="card-tags">
+            <span class="tag">iOS</span>
+            <span class="tag">AI</span>
+            <span class="tag">Beverages</span>
+            <span class="tag">Sober Curious</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="coming-soon">In development</span>
+        </div>
+      </article>
+
     </div>
   </section>
 
+  <!-- ── Consulting ── -->
   <section class="cards-section" id="consulting">
     <div class="section-label">Consulting</div>
     <div class="grid">
